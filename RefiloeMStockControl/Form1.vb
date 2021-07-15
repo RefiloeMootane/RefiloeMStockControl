@@ -106,8 +106,8 @@
 
         lblRemainder.Text = Val(txtStockLevel.Text) - Val(txtNoOrder.Text)
 
-        If (lblRemainder.Text <= 10) Then
-            lblAction.Text = "Order more product"
+        If (lblRemainder.Text <= 30) Then
+            MsgBox("More order requested", MsgBoxStyle.Information, "Order message")
         Else
             lblAction.Text = "No Order requested"
         End If

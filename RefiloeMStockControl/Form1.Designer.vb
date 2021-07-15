@@ -42,7 +42,6 @@ Partial Class Form1
         Me.txtProductName = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -95,6 +94,7 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.txtNoOrder)
         Me.GroupBox1.Controls.Add(Me.lblAction)
@@ -114,7 +114,6 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.txtProductName)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -140,19 +139,23 @@ Partial Class Form1
         '
         'txtNoOrder
         '
+        Me.txtNoOrder.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtNoOrder.ForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNoOrder.Location = New System.Drawing.Point(133, 275)
+        Me.txtNoOrder.Multiline = True
         Me.txtNoOrder.Name = "txtNoOrder"
-        Me.txtNoOrder.Size = New System.Drawing.Size(143, 33)
+        Me.txtNoOrder.Size = New System.Drawing.Size(148, 33)
         Me.txtNoOrder.TabIndex = 49
         '
         'lblAction
         '
-        Me.lblAction.BackColor = System.Drawing.Color.White
+        Me.lblAction.BackColor = System.Drawing.SystemColors.Control
         Me.lblAction.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblAction.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblAction.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.lblAction.Location = New System.Drawing.Point(133, 320)
         Me.lblAction.Name = "lblAction"
-        Me.lblAction.Size = New System.Drawing.Size(148, 32)
+        Me.lblAction.Size = New System.Drawing.Size(10, 10)
         Me.lblAction.TabIndex = 48
         Me.lblAction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -183,7 +186,7 @@ Partial Class Form1
         Me.lblReOrderLevel.BackColor = System.Drawing.Color.White
         Me.lblReOrderLevel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblReOrderLevel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblReOrderLevel.Location = New System.Drawing.Point(133, 183)
+        Me.lblReOrderLevel.Location = New System.Drawing.Point(133, 187)
         Me.lblReOrderLevel.Name = "lblReOrderLevel"
         Me.lblReOrderLevel.Size = New System.Drawing.Size(298, 32)
         Me.lblReOrderLevel.TabIndex = 35
@@ -243,7 +246,7 @@ Partial Class Form1
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(127, 390)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(127, 338)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(304, 33)
         Me.DateTimePicker1.TabIndex = 22
@@ -300,21 +303,11 @@ Partial Class Form1
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "No. of Order "
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(25, 322)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 17)
-        Me.Label8.TabIndex = 8
-        Me.Label8.Text = "Action"
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(21, 390)
+        Me.Label9.Location = New System.Drawing.Point(6, 338)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(96, 17)
         Me.Label9.TabIndex = 7
@@ -784,7 +777,6 @@ Partial Class Form1
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label5 As Label
