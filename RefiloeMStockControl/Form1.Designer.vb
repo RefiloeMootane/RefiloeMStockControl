@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.txtNoOrder = New System.Windows.Forms.TextBox()
         Me.lblAction = New System.Windows.Forms.Label()
         Me.lblRemainder = New System.Windows.Forms.Label()
@@ -87,7 +88,6 @@ Partial Class Form1
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -129,6 +129,14 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Stock  Control"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(1078, 61)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(200, 33)
+        Me.ComboBox1.TabIndex = 46
         '
         'txtNoOrder
         '
@@ -184,7 +192,7 @@ Partial Class Form1
         'cmbProductID
         '
         Me.cmbProductID.FormattingEnabled = True
-        Me.cmbProductID.Location = New System.Drawing.Point(133, 25)
+        Me.cmbProductID.Location = New System.Drawing.Point(133, 22)
         Me.cmbProductID.Name = "cmbProductID"
         Me.cmbProductID.Size = New System.Drawing.Size(298, 33)
         Me.cmbProductID.TabIndex = 33
@@ -237,7 +245,7 @@ Partial Class Form1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(127, 390)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 33)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(304, 33)
         Me.DateTimePicker1.TabIndex = 22
         '
         'Label12
@@ -267,7 +275,7 @@ Partial Class Form1
         '
         'txtProductName
         '
-        Me.txtProductName.Location = New System.Drawing.Point(133, 64)
+        Me.txtProductName.Location = New System.Drawing.Point(133, 61)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.Size = New System.Drawing.Size(143, 33)
         Me.txtProductName.TabIndex = 12
@@ -346,7 +354,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(25, 64)
+        Me.Label2.Location = New System.Drawing.Point(25, 31)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(96, 17)
         Me.Label2.TabIndex = 2
@@ -356,7 +364,7 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(25, 33)
+        Me.Label1.Location = New System.Drawing.Point(32, 61)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 17)
         Me.Label1.TabIndex = 1
@@ -753,14 +761,6 @@ Partial Class Form1
         Me.Label23.Size = New System.Drawing.Size(29, 17)
         Me.Label23.TabIndex = 34
         Me.Label23.Text = "Tax"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(1078, 61)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(200, 33)
-        Me.ComboBox1.TabIndex = 46
         '
         'Form1
         '

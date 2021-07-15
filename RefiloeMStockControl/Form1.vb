@@ -1,4 +1,5 @@
 ﻿Public Class Form1
+
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim iExit As DialogResult
         iExit = MessageBox.Show("Confirm if you want to exit", "Stock Control", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
@@ -23,11 +24,11 @@
         cmbVAT.Items.Add("Yes")
         cmbVAT.Items.Add("No")
 
-        cmbProductID.Items.Add("PID001")
-        cmbProductID.Items.Add("PID012")
-        cmbProductID.Items.Add("PID013")
-        cmbProductID.Items.Add("PID014")
-        cmbProductID.Items.Add("PID015")
+        cmbProductID.Items.Add("Milk")
+        cmbProductID.Items.Add("Rice")
+        cmbProductID.Items.Add("Cake")
+        cmbProductID.Items.Add("Apple")
+        cmbProductID.Items.Add("Beef")
         cmbProductID.Items.Add("PID016")
 
         For q = 18 To 28
@@ -41,38 +42,38 @@
     End Sub
 
     Private Sub cmbProductID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbProductID.SelectedIndexChanged
-        If cmbProductID.Text = "PID001" Then
-            txtProductName.Text = "Milk"
-            txtDescription.Text = "white liquid"
+        If cmbProductID.Text = "Milk" Then
+            txtProductName.Text = "PID001"
+            txtDescription.Text = "Dairy"
             txtStockLevel.Text = "280"
             lblReOrderLevel.Text = "10"
             lblOutofStock.Text = "15"
-        ElseIf cmbProductID.Text = "PID012" Then
-            txtProductName.Text = "Rice"
+        ElseIf cmbProductID.Text = "Rice" Then
+            txtProductName.Text = "PID012"
             txtDescription.Text = "white Seed"
             txtStockLevel.Text = "200"
             lblReOrderLevel.Text = "30"
             lblOutofStock.Text = "10"
-        ElseIf cmbProductID.Text = "PID013" Then
-            txtProductName.Text = "Cake"
+        ElseIf cmbProductID.Text = "Cake" Then
+            txtProductName.Text = "PID013"
             txtDescription.Text = "Flour/grain"
             txtStockLevel.Text = "50"
             lblReOrderLevel.Text = "15"
             lblOutofStock.Text = "25"
-        ElseIf cmbProductID.Text = "PID014" Then
-            txtProductName.Text = "Egg"
+        ElseIf cmbProductID.Text = "Egg" Then
+            txtProductName.Text = "PID013"
             txtDescription.Text = "Poultry"
             txtStockLevel.Text = "500"
             lblReOrderLevel.Text = "150"
             lblOutofStock.Text = "20"
-        ElseIf cmbProductID.Text = "PID015" Then
-            txtProductName.Text = "Apple"
+        ElseIf cmbProductID.Text = "Apple" Then
+            txtProductName.Text = "PID014"
             txtDescription.Text = "fruit"
             txtStockLevel.Text = "300"
             lblReOrderLevel.Text = "15"
             lblOutofStock.Text = "10"
-        ElseIf cmbProductID.Text = "PID016" Then
-            txtProductName.Text = "Beef"
+        ElseIf cmbProductID.Text = "Beef" Then
+            txtProductName.Text = "PID015"
             txtDescription.Text = "Meat"
             txtStockLevel.Text = "120"
             lblReOrderLevel.Text = "25"
@@ -105,7 +106,7 @@
 
         lblRemainder.Text = Val(txtStockLevel.Text) - Val(txtNoOrder.Text)
 
-        If (lblRemainder.Text = 2) Then
+        If (lblRemainder.Text <= 10) Then
             lblAction.Text = "Order more product"
         Else
             lblAction.Text = "No Order requested"
