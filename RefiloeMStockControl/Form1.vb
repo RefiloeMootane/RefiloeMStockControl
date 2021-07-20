@@ -41,6 +41,8 @@
         Next
     End Sub
 
+
+
     Private Sub cmbProductID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbProductID.SelectedIndexChanged
         If cmbProductID.Text = "Milk" Then
             txtProductName.Text = "PID001"
@@ -48,36 +50,42 @@
             txtStockLevel.Text = "280"
             lblReOrderLevel.Text = "10"
             lblOutofStock.Text = "15"
+            txtCost.Text = " 17"
         ElseIf cmbProductID.Text = "Rice" Then
             txtProductName.Text = "PID012"
             txtDescription.Text = "white Seed"
             txtStockLevel.Text = "200"
             lblReOrderLevel.Text = "30"
             lblOutofStock.Text = "10"
+            txtCost.Text = " 26"
         ElseIf cmbProductID.Text = "Cake" Then
             txtProductName.Text = "PID013"
             txtDescription.Text = "Flour/grain"
             txtStockLevel.Text = "50"
             lblReOrderLevel.Text = "15"
             lblOutofStock.Text = "25"
+            txtCost.Text = " 65"
         ElseIf cmbProductID.Text = "Egg" Then
             txtProductName.Text = "PID013"
             txtDescription.Text = "Poultry"
             txtStockLevel.Text = "500"
             lblReOrderLevel.Text = "150"
             lblOutofStock.Text = "20"
+            txtCost.Text = " 80"
         ElseIf cmbProductID.Text = "Apple" Then
             txtProductName.Text = "PID014"
             txtDescription.Text = "fruit"
             txtStockLevel.Text = "300"
             lblReOrderLevel.Text = "15"
             lblOutofStock.Text = "10"
+            txtCost.Text = " 36"
         ElseIf cmbProductID.Text = "Beef" Then
             txtProductName.Text = "PID015"
             txtDescription.Text = "Meat"
             txtStockLevel.Text = "120"
             lblReOrderLevel.Text = "25"
             lblOutofStock.Text = "14"
+            txtCost.Text = " 102"
         End If
     End Sub
 
@@ -94,7 +102,7 @@
     End Sub
 
     Private Sub txtProductName_TextChanged(sender As Object, e As EventArgs) Handles txtProductName.TextChanged
-        lblItemOrdered.Text = txtProductName.Text
+        lblItemOrdered.Text = cmbProductID.Text
     End Sub
 
     Private Sub lblRemainder_Click(sender As Object, e As EventArgs) Handles lblRemainder.Click
@@ -113,4 +121,43 @@
         End If
     End Sub
 
+    Private Sub btnTotal_Click(sender As Object, e As EventArgs) Handles btnTotal.Click
+        lblTotal.Text = Val(txtCost.Text) * Val(txtNoOrder.Text)
+        lblTotal.Text = FormatCurrency(lblTotal.Text)
+    End Sub
+
+    Private Sub cmbPaymentMethod_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPaymentMethod.SelectedIndexChanged
+        If cmbPaymentMethod.Text = "Cash" Then
+            cmbAccountType.Text = "Pay"
+        Else
+            cmbAccountType.Text = "AccountType"
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        txtCost.Text = ""
+        lblTax.Text = ""
+        lblSubTotal.Text = ""
+        lblTotal.Text = ""
+        cmbCustomerID.Text = "0"
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        txtCost.Text = ""
+        lblTax.Text = ""
+        lblSubTotal.Text = ""
+        lblTotal.Text = ""
+
+    End Sub
+
+    Private Sub lblOutofStock_Click(sender As Object, e As EventArgs) Handles lblOutofStock.Click
+        If (lblReOrderLevel.Text <= 30) Then
+            txtNoOrder.Text = "Order More stock"
+        End If
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class
